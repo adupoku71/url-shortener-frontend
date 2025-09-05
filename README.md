@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# URL Shortener Frontend
 
-## Getting Started
+A modern and minimalistic **Next.js + Tailwind CSS** frontend for a URL shortener service.  
+This app provides a simple interface to shorten long links and view basic link statistics.  
+The backend is powered by **Django REST Framework (DRF)** (to be integrated later).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Paste a long URL and generate a short link
+- (Optional) Add a custom short code
+- Copy shortened link with one click
+- View link statistics (click count, creation date, etc.) _(coming soon)_
+- Clean, responsive UI built with TailwindCSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [Next.js 13+ (App Router)](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- TypeScript
 
-## Learn More
+## 📦 Setup & Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/adupoku71/url-shortener-frontend.git
+   cd url-shortener-frontend
+   ```
+2. Install dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Run the dev server:
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+- [URL Shortener Backend (DRF)](https://github.com/adupoku71/url-shortener-backend) _(coming soon)_
