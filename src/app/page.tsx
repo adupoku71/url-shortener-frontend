@@ -1,3 +1,4 @@
+import QuickAccessLinks from "@/components/QuickAccessLinks";
 import ShortenForm from "@/components/ShortenForm";
 
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
       </div>
       {/* Main Form  */}
       <ShortenForm />
+      <QuickAccessLinks />
     </main>
   );
 }
