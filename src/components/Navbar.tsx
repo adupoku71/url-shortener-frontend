@@ -3,101 +3,69 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="border-b border-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold text-gray-900">
-              ShortLink
-            </Link>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/dashboard"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Dashboard
-            </Link>
-            <Link
-              href="/analytics"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Analytics
-            </Link>
-            <Link
-              href="/login"
-              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              href="/signup"
-              className="bg-transparent text-black px-4 py-2 border-gray-100 rounded-lg hover:text-white hover:bg-black transition-colors border"
-            >
-              Sign Up
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              className="text-gray-600 hover:text-gray-900"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+    <nav className="w-full border-b border-gray-200 dark:border-gray-700">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="text-lg font-bold text-black dark:text-white">
+          ShortLink
         </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
-            <div className="flex flex-col space-y-3">
-              <Link
-                href="/dashboard"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="/analytics"
-                className="text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Analytics
-              </Link>
-              <Link
-                href="/login"
-                className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors w-fit"
-              >
-                Login
-              </Link>
-              <Link
-                href="/signup"
-                className="bg-white border-gray-300 border text-black px-4 py-2 rounded-lg hover:text-white hover:bg-black transition-colors w-fit"
-              >
-                Sign up
-              </Link>
-            </div>
-          </div>
-        )}
+        {/* Desktop Nav */}
+        <div className="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
+          <Link href="#" className="hover:text-black dark:hover:text-white">
+            Home
+          </Link>
+          <Link href="#" className="hover:text-black dark:hover:text-white">
+            Dashboard
+          </Link>
+          <Link href="#" className="hover:text-black dark:hover:text-white">
+            Login
+          </Link>
+          <Link href="#" className="hover:text-black dark:hover:text-white">
+            Sign Up
+          </Link>
+        </div>
+
+        {/* Mobile Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="cursor-pointer md:hidden text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white text-2xl"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="px-6 pb-4 space-y-2 md:hidden">
+          <Link
+            href="#"
+            className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+          >
+            Home
+          </Link>
+          <Link
+            href="#"
+            className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+          >
+            Dashboard
+          </Link>
+          <Link
+            href="#"
+            className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+          >
+            Login
+          </Link>{" "}
+          <Link
+            href="#"
+            className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
+          >
+            Sign up
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }
