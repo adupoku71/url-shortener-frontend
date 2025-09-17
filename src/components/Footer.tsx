@@ -13,7 +13,7 @@ export default function Footer() {
   if (!mounted) return null;
 
   return (
-    <footer className="w-full   dark:bg-gray-900 border-gray-200 dark:border-gray-800 py-4">
+    <footer className="w-full py-4">
       <div className="max-w-6xl md:max-w-3xl mx-auto px-4 flex flex-row sm:flex-row justify-between items-center">
         {/* Left Text */}
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-2 sm:mb-0">

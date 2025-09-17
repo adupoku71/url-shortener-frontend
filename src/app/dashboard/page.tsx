@@ -90,7 +90,7 @@ export default function DashboardPage() {
             />
             <button
               onClick={createShortLink}
-              className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors whitespace-nowrap"
+              className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600  transition-colors whitespace-nowrap"
             >
               Create Link
             </button>
