@@ -14,7 +14,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full py-4">
-      <div className="max-w-6xl md:max-w-3xl mx-auto px-4 flex flex-row sm:flex-row justify-between items-center">
+      <div className="md:max-w-5xl mx-auto px-4 flex flex-row sm:flex-row justify-between items-center">
         {/* Left Text */}
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-2 sm:mb-0">
           &copy; {new Date().getFullYear()} Shortlink - Adu-Poku

@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className="w-full border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-5xl mx-auto  py-4 flex justify-between items-center">
+      <div className="max-w-5xl mx-auto  py-4 flex justify-between items-center px-4">
         <div className="text-lg font-bold text-black dark:text-white">
           ShortLink
         </div>
@@ -23,10 +23,16 @@ export default function Navbar() {
           >
             Dashboard
           </Link>
-          <Link href="#" className="hover:text-black dark:hover:text-white">
+          <Link
+            href="/login"
+            className="hover:text-black dark:hover:text-white"
+          >
             Login
           </Link>
-          <Link href="#" className="hover:text-black dark:hover:text-white">
+          <Link
+            href="/register"
+            className="hover:text-black dark:hover:text-white"
+          >
             Sign Up
           </Link>
         </div>
@@ -56,13 +62,13 @@ export default function Navbar() {
             Dashboard
           </Link>
           <Link
-            href="#"
+            href="/login"
             className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
           >
             Login
-          </Link>{" "}
+          </Link>
           <Link
-            href="#"
+            href="/register"
             className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
           >
             Sign up
