@@ -7,17 +7,20 @@ export default function Navbar() {
 
   return (
     <nav className="w-full border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-5xl mx-auto  py-4 flex justify-between items-center">
         <div className="text-lg font-bold text-black dark:text-white">
           ShortLink
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex space-x-6 text-gray-600 dark:text-gray-300">
-          <Link href="#" className="hover:text-black dark:hover:text-white">
+          <Link href="/" className="hover:text-black dark:hover:text-white">
             Home
           </Link>
-          <Link href="#" className="hover:text-black dark:hover:text-white">
+          <Link
+            href="/dashboard"
+            className="hover:text-black dark:hover:text-white"
+          >
             Dashboard
           </Link>
           <Link href="#" className="hover:text-black dark:hover:text-white">
@@ -41,13 +44,13 @@ export default function Navbar() {
       {menuOpen && (
         <div className="px-6 pb-4 space-y-2 md:hidden">
           <Link
-            href="#"
+            href="/"
             className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
           >
             Home
           </Link>
           <Link
-            href="#"
+            href="/dashboard"
             className="block text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white"
           >
             Dashboard
